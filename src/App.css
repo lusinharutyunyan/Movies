@@ -1,0 +1,10 @@
+
+.movies {
+  /* background-color:#00022d; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.root{
+  display: flex;
+  flex-direction: column;
+}
