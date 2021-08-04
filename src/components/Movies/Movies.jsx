@@ -1,6 +1,7 @@
 import React from "react";
 import "./Movies.css";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import CancelIcon from "@material-ui/icons/Cancel";
 
 const IMG = "https://image.tmdb.org/t/p/w1280";
 
@@ -22,6 +23,9 @@ export default function Movies({
       ])
     );
   };
+  const handleDel = () => {
+    localStorage.removeItem("movie");
+  };
 
   return (
     <div className='w-64 m-5 relative overflow-hidden	' id='parent'>
@@ -39,12 +43,15 @@ export default function Movies({
         <h2>Overview:</h2>
         <p className=''>{overview}</p>
         <div className='text-center'>
-          {" "}
           <button
             className='group rounded-sm  focus:bg-red-700 '
             onClick={handleFavs}>
-            {""}
-            <FavoriteIcon className='group-focus:text-yellow-300 ' />
+            <FavoriteIcon />
+          </button>
+          <button
+            className='group rounded-sm focus:bg-red-700'
+            onClick={handleDel}>
+            <CancelIcon />{" "}
           </button>
         </div>
       </div>

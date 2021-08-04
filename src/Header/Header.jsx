@@ -7,12 +7,12 @@ export default function Header() {
   return (
     <header className='bg-indigo-900 p-2 flex justify-center text-indigo-100'>
       <form className='flex  flex-row p-2 '>
-        <h1 className='text-3xl font-bold'>
+        <h1 className='text-3xl font-bold mr-44'>
           <Link to='/body' onClick={() => history.push("/body")}>
             DAS AREQ
           </Link>
         </h1>
-        <Link className='ml-12 mt-2 text-2x1 font-medium' to='/favorites'>
+        <Link className='ml-12 mt-2 text-2x1 font-medium mr-20' to='/favorites'>
           Favorites
         </Link>
         <div className='flex flex-row ml-96'>
