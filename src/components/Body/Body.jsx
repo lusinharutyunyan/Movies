@@ -40,7 +40,7 @@ export default function Body() {
     <>
       <Header />
       <div className='bg-gray-900'>
-        <div className='blcok  text-4xl p-4 text-gray-300  ml-20'>POPULAR</div>
+        <div className='block  text-4xl p-4 text-gray-300  ml-20'>POPULAR</div>
         <div className='movies flex justify-center '>
           {movies.length > 0 &&
             movies.map((movie) => <Movies key={movie.id} {...movie} />)}
