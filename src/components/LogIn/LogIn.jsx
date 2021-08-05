@@ -4,7 +4,6 @@ import { useFormik } from "formik";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
-
 export default function LogIn() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -36,7 +35,7 @@ export default function LogIn() {
 
           <button
             className='text-center w-full bg-gray-900 rounded-md text-white py-3 font-medium'
-            onClick={() => history.push("/body")}
+            onClick={() => history.push("/films")}
             disabled={!(username && password)}>
             Login
           </button>

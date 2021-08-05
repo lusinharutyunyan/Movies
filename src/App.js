@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import Body from "./components/Body/Body";
+import AllFilms from "./components/Body/AllFilms";
 import Routers from "./constants/Router";
 
 export default function App() {

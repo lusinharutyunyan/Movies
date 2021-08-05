@@ -3,15 +3,14 @@ import "./Movies.css";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import CancelIcon from "@material-ui/icons/Cancel";
 
-const IMG = "https://image.tmdb.org/t/p/w1280";
-
 export default function Movies({
   title,
-  poster_path,
   overview,
   vote_average,
+  poster_path,
   id,
 }) {
+  const IMG = "https://image.tmdb.org/t/p/w1280";
   const handleFavs = () => {
     localStorage.setItem(
       "movie",
@@ -22,9 +21,6 @@ export default function Movies({
         id,
       ])
     );
-  };
-  const handleDel = () => {
-    localStorage.removeItem("movie");
   };
 
   return (
@@ -48,10 +44,8 @@ export default function Movies({
             onClick={handleFavs}>
             <FavoriteIcon />
           </button>
-          <button
-            className='group rounded-sm focus:bg-red-700'
-            onClick={handleDel}>
-            <CancelIcon />{" "}
+          <button className='group rounded-sm focus:bg-red-700'>
+            <CancelIcon />
           </button>
         </div>
       </div>

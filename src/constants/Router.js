@@ -1,23 +1,27 @@
 import React from "react";
 import {
   BrowserRouter as Router,
-  Redirect,
-  Route,
   Switch,
+  Route,
+  Redirect,
 } from "react-router-dom";
-import Body from "../components/Body/Body";
-import Favorites from "../components/Favorites/Favorites";
+import AllFilms from "../components/Body/AllFilms";
+import SearchAppBar from "../components/Header/Header";
 import LogIn from "../components/LogIn/LogIn";
+import Favorites from "../components/Favorites/Favorites";
 
 export default function Routers() {
+  const user = false;
+
   return (
     <Router>
       <Switch>
+        <Route exact path='/films' component={AllFilms} />
+        <Route exact path='/home' component={SearchAppBar} />
         <Route exact path='/login' component={LogIn} />
-        <Route exact path='/body' component={Body} />
         <Route exact path='/favorites' component={Favorites} />
       </Switch>
-      <Redirect from='/' to='/login' />
+      <Redirect from='/' to='/films' />
     </Router>
   );
 }

@@ -1,7 +1,6 @@
-import React from "react";
+import Header from "../Header/Header";
 import { useState } from "react";
 import { useEffect } from "react";
-import Header from "../../Header/Header";
 import FavMovies from "./FavMovies";
 
 export default function Favorites() {
