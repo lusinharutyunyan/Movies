@@ -108,7 +108,7 @@ export default function Header(props, { children }) {
           <Typography className={classes.title} variant='h6' noWrap>
             <Link to='/films'>LOSER</Link>
           </Typography>
-          <Link to='/favorites'>Favorits</Link>
+          <Link to='/favorites' className="mr-80">Favorits</Link>
           <form onSubmit={handleOnSubmit}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
