@@ -9,6 +9,7 @@ import AllFilms from "../components/Body/AllFilms";
 import SearchAppBar from "../components/Header/Header";
 import LogIn from "../components/LogIn/LogIn";
 import Favorites from "../components/Favorites/Favorites";
+import Info from "../components/InfoPage";
 
 export default function Routers() {
   const user = false;
@@ -20,6 +21,7 @@ export default function Routers() {
         <Route exact path='/home' component={SearchAppBar} />
         <Route exact path='/login' component={LogIn} />
         <Route exact path='/favorites' component={Favorites} />
+        <Route exact path='/info' component={Info} />
       </Switch>
       <Redirect from='/' to='/films' />
     </Router>

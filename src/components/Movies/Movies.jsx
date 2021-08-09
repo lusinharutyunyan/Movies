@@ -2,6 +2,7 @@ import React from "react";
 import "./Movies.css";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import CancelIcon from "@material-ui/icons/Cancel";
+import { useHistory } from "react-router-dom";
 
 export default function Movies({
   title,
@@ -23,9 +24,19 @@ export default function Movies({
     );
   };
 
+  let history = useHistory();
+
+  const removeFav = () => {
+    localStorage.removeItem("movie");
+  };
+
+  const handlePageChange = () => {
+    history.push("/info");
+  };
+
   return (
     <div className='w-64 m-5 relative overflow-hidden	' id='parent'>
-      <div>
+      <div onClick={handlePageChange}>
         <img className='max-w-full' src={IMG + poster_path} alt={title}></img>
         <div className=' bg-indigo-900 h-8 flex justify-around text-lg '>
           <h3>{title}</h3>
@@ -44,7 +55,9 @@ export default function Movies({
             onClick={handleFavs}>
             <FavoriteIcon />
           </button>
-          <button className='group rounded-sm focus:bg-red-700'>
+          <button
+            className='group rounded-sm focus:bg-red-700'
+            onClick={removeFav}>
             <CancelIcon />
           </button>
         </div>

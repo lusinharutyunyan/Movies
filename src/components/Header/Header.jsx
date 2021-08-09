@@ -96,7 +96,7 @@ export default function Header(props, { children }) {
   };
 
   return (
-    <div className={classes.root}>
+    <div className='bg-indigo-900'>
       <AppBar className={classes.appBar} position='static'>
         <Toolbar className={classes.toolBar}>
           <IconButton
@@ -108,7 +108,9 @@ export default function Header(props, { children }) {
           <Typography className={classes.title} variant='h6' noWrap>
             <Link to='/films'>LOSER</Link>
           </Typography>
-          <Link to='/favorites' className="mr-80">Favorits</Link>
+          <Link to='/favorites' className='mr-80'>
+            Favorites
+          </Link>
           <form onSubmit={handleOnSubmit}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
