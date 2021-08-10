@@ -53,12 +53,13 @@ export default function Movies({
             onClick={handleFavs}>
             <FavoriteIcon />
           </button>
-          <Link to={`/films/${id}`}>dETAILS</Link>
+          {" "}
           <button
             className='group rounded-sm focus:bg-red-700'
             onClick={removeFav}>
             <CancelIcon />
-          </button>
+          </button>{" "}
+          <Link to={`/films/${id}`}>Details</Link>
         </div>
       </div>
     </div>

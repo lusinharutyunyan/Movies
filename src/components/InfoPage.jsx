@@ -23,7 +23,7 @@ export default function Info() {
    
     <div className='bg-gray-900 h-screen'>
       <Header />
-      <div class='container mx-auto py-12 px-4 bg-gray-900 flex justify-center'>
+      <div class='container mx-auto py-12 px-4 bg-gray-900 flex justify-center mt-16'>
         <div class='inline-grid max-w-xs sm:max-w-xs lg:max-w-lg lg:flex bg-white rounded-lg border shadow-lg pb-6 lg:pb-0'>
           <div class='w-full lg:w-1/3 lg:p-4'>
             <img
@@ -39,7 +39,7 @@ export default function Info() {
                 {movie.original_title}
               </p>
               <p class='raleway text-sm my-4 text-black opacity-75'>
-                {movie.vote_average}
+               Rating : {movie.vote_average}
               </p>
               <p className='text-black'>{movie.overview}</p>
             </div>
