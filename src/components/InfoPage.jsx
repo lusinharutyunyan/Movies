@@ -20,15 +20,29 @@ export default function Info() {
       });
   }, [URL]);
   return (
-    <div className='bg-gray-900 w-full h-screen text-white'>
+   
+    <div className='bg-gray-900 h-screen'>
       <Header />
-      <div className='movie m-2  max-w-full max-h-full'>
-        <img src={imgUrl} alt='img' />
-        <div className='movie-info'>
-          <h1 className='text-2xl'>{movie.original_title} </h1>
-          <h2 className='text-lg'>{movie.vote_average}</h2>
-          <div className='movie-over'>
-            <h3>{movie.overview}</h3>
+      <div class='container mx-auto py-12 px-4 bg-gray-900 flex justify-center'>
+        <div class='inline-grid max-w-xs sm:max-w-xs lg:max-w-lg lg:flex bg-white rounded-lg border shadow-lg pb-6 lg:pb-0'>
+          <div class='w-full lg:w-1/3 lg:p-4'>
+            <img
+              src={imgUrl}
+              alt='image'
+              class='h-64 lg:h-full object-cover object-center w-full'
+            />
+          </div>
+
+          <div class='w-full lg:w-2/3 p-4'>
+            <div class='inline-grid'>
+              <p class='work-sans font-semibold text-xl text-black'>
+                {movie.original_title}
+              </p>
+              <p class='raleway text-sm my-4 text-black opacity-75'>
+                {movie.vote_average}
+              </p>
+              <p className='text-black'>{movie.overview}</p>
+            </div>
           </div>
         </div>
       </div>
