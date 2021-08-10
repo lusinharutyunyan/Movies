@@ -106,7 +106,7 @@ export default function Header(props, { children }) {
             aria-label='open drawer'></IconButton>
 
           <Typography className={classes.title} variant='h6' noWrap>
-            <Link to='/films'>LOSER</Link>
+            <Link to='/films'>WATCH IT</Link>
           </Typography>
           <Link to='/favorites' className='mr-80'>
             Favorites
