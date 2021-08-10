@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
-import { useFormik } from "formik";
-import { Formik, Form, Field } from "formik";
-import * as Yup from "yup";
+
 
 export default function LogIn() {
   const [username, setUsername] = useState("");

@@ -21,7 +21,7 @@ export default function Routers() {
         <Route exact path='/home' component={SearchAppBar} />
         <Route exact path='/login' component={LogIn} />
         <Route exact path='/favorites' component={Favorites} />
-        <Route exact path='/info' component={Info} />
+        <Route exact path='/films/:movieId' component={Info} />
       </Switch>
       <Redirect from='/' to='/films' />
     </Router>
