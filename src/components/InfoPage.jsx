@@ -28,7 +28,7 @@ export default function Info() {
           <div class='w-full lg:w-1/3 lg:p-4'>
             <img
               src={imgUrl}
-              alt='image'
+              alt='movie'
               class='h-64 lg:h-full object-cover object-center w-full'
             />
           </div>
