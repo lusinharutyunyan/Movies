@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import FavMovies from "./FavMovies";
 
 export default function Favorites() {
-  const movies = localStorage.getItem("movie");
-  const moviesarr = JSON.parse(movies);
+  // const movies = localStorage.getItem("movie");
+  // const moviesarr = JSON.parse(movies);
   const [movie, setMovie] = useState([]);
   const favorite = JSON.parse(localStorage.getItem("movie"));
 

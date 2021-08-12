@@ -2,7 +2,7 @@ import React from "react";
 import "./Movies.css";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import CancelIcon from "@material-ui/icons/Cancel";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Movies({
   title,
@@ -24,13 +24,9 @@ export default function Movies({
     );
   };
 
-  let history = useHistory();
-
   const removeFav = () => {
     localStorage.removeItem("movie");
   };
-
-  const handlePageChange = () => {};
 
   return (
     <div className='w-64 m-5 relative overflow-hidden	' id='parent'>
@@ -52,8 +48,7 @@ export default function Movies({
             className='group rounded-sm  focus:bg-red-700 '
             onClick={handleFavs}>
             <FavoriteIcon />
-          </button>
-          {" "}
+          </button>{" "}
           <button
             className='group rounded-sm focus:bg-red-700'
             onClick={removeFav}>

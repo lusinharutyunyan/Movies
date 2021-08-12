@@ -12,7 +12,7 @@ import Favorites from "../components/Favorites/Favorites";
 import Info from "../components/InfoPage";
 
 export default function Routers() {
-  const user = false;
+  // const user = false;
 
   return (
     <Router>

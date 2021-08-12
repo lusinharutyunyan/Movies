@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import { alpha, makeStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import { Link } from "react-router-dom";
 
@@ -70,12 +69,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SEARCH_API = "https://api.themoviedb.org/3/search/company?api_key=";
+// const SEARCH_API = "https://api.themoviedb.org/3/search/company?api_key=";
 
 export default function Header(props, { children }) {
   const classes = useStyles();
   const [searchTerm, setSearchTerm] = useState(" ");
-  const [movies, setMovies] = useState([]);
+ 
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
